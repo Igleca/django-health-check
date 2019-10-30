@@ -74,6 +74,7 @@ Add the ``health_check`` applications to your ``INSTALLED_APPS``:
         'health_check.contrib.s3boto_storage',      # requires boto and S3BotoStorage backend
         'health_check.contrib.rabbitmq',            # requires RabbitMQ broker
         'health_check.contrib.redis',               # required Redis broker
+        'health_check.contrib.third_party_services' # to check whether third party urls are working or not. Add URLs in list `HEALTHCHECK_THIRD_PARTY_URLS`. It checks whether each URL provided responds with 2xx response or not.
     ]
 
 (Optional) If using the ``psutil`` app, you can configure disk and memory
